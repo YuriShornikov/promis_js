@@ -19,7 +19,7 @@ export default class GameSavingLoader {
         .finally(() => {
             
             // Логика, которая выполняется вне зависимости от успешного/неуспешного завершения
-            console.log('Game saving loading process completed');
+            console.log('completed');
         });
     }
 }

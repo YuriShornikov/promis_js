@@ -1,10 +1,9 @@
 import read from "../reader";
 
-jest.useFakeTimers;
+jest.setTimeout(15000);
 
-test('test func', async () => {
-  const promise = read();
-  jest.runAllTimers();
-  const result = await promise;
-  expect(result).toBeInstanceOf(ArrayBuffer);
+test('testing func', () => {
+  return read().then((result) => {
+    expect(result).toBeInstanceOf(ArrayBuffer);
+  });
 });
